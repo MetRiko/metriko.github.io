@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Colorfull box</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body onload="runWebGL()">
+
+	<div class="guiBox" align="center">
+		<table class="sliders" style="height:120px;padding-bottom:5px;width:400px;">
+			<tr>
+				<th style="width:140px"></th>
+				<th style="width:auto"></th>
+			</tr>
+			<tr style="height:100%">
+				<td><label class="slidecontainer">Rotations:</label></td>
+				<td>
+					<label class="container">X
+						<input type="checkbox" id="rotateX" onclick="callbackCheckboxX()">
+						<span class="checkmark"></span>
+					</label>
+					<label class="container">Y
+						<input type="checkbox" id="rotateY" onclick="callbackCheckboxY()">
+						<span class="checkmark"></span>
+					</label>
+					<label class="container">Z
+						<input type="checkbox" id="rotateZ" onclick="callbackCheckboxZ()">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+			</tr>
+		</table>
+		<canvas id="glcanvas" width="500" height="500" >
+			Brak wsparcia dla elementu HTML5 typu canvas 
+		</canvas>
+		<br>
+		<table>
+			<tr>
+				<td><a href="../Sierpinski/index.html" class="ChangePageButton">&#8249;</a></td>
+				<td style="width:220px" align="center">Colorfull box</td>
+				<td><a href="../Texturing/index.html" class="ChangePageButton">&#8250;</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<script src="main.js"></script>
+	<script src="matrix.js"></script>
+</body>
+</html>
