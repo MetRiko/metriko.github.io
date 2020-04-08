@@ -1,19 +1,69 @@
-<!DOCTYPE html>
+<style>
+    body {
+        background: #8a99aa;
+    }
+</style>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
 <html>
-<head>
-	<title>Textured box</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body onload="runWebGL()">
+    <head>
+        <!-- <script src="./main.js"></script> -->
+        <!-- <script>Tarp.require({main: "./main"});</script> -->
+        <!-- <script src="./main.js"></script> -->
 
-	<div class="guiBox" align="center">
-		<div style="font-size: 30px">
-			Jakub Majewski - Portfolio
-		</div>
-		<br>
+        <title>Antlr</title>
+    </head>
+    <body>
 
-		Go to WebGL project
-		<a href="WebGL/FlatColors/index.html" class="ChangePageButton">&#8250;</a></td>
-	</div>
-</body>
+        <div class="editors">
+            
+            <div class="container">
+                <div class="form form-stacked">
+                    <div class="form-block">
+                    <div class="form-controls">
+                        <span class="button" id="parse">Run</span>
+                        <span class="button" id="compile">Compile</span>
+                    </div>
+                    <textarea placeholder="Enter code here..." class="textarea-tall" id="code"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="form form-stacked">
+                    <div class="form-block">
+                    <div class="form-controls">
+                        <span class="button label">Program output</span>
+                        <span class="button" id="clear">Clear</span>
+                    </div>
+                    <textarea placeholder="OUTPUT" class="textarea-tall" id="output"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="form form-stacked">
+                    <div class="form-block">
+                    <div class="form-controls">
+                        <span class="button label">Compiled assembly</span>
+                    </div>
+                    <textarea placeholder="ASSEMBLY" class="textarea-tall" id="assembly"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="inputs">
+            <textarea id="code"></textarea>
+            <br/>
+            <button id="parse">Parse</button>
+        </div>
+        <div id="tree"></div> -->
+        
+    </body>
+
+    <script src="./node_modules/tarp.require-1.4.3/require.js"></script>
+    <script>Tarp.require({main: "./main"});</script>
+    <script src="init.js"></script>
 </html>
